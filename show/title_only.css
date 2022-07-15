@@ -1,12 +1,46 @@
 * {
     box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+    display: none;
+}
 body {
-    background-color: rgb(80, 190, 230);
+    background-color: rgb(217,250,239);
     color: black;
     font-family: Arial;
     font-weight: bold;
 }
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#thema_ja, #thema_ch {
+    text-align: center;
+    font-size: 7rem;
+}
+#thema_ch {
+    color: rgb(23,28,107);
+}
+#wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(213,229,245);
+}
+#info {
+    display: inline-block;
+    margin: 0 auto;
+    
+}
+#speech, #translator, #hymn {
+    font-size: 4rem;
+}
+#hymn {
+    color: rgb(0,30,245);
+}
+/*
 .wrap {
     display: flex;
     height: 100vh;
@@ -22,4 +56,4 @@ body {
 }
 #hymn {
     font-size: 4em;
-}
+} */

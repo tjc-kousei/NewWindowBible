@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="./title_only.css">
 </head>
 <body>
-    <div class="wrap">
-        <div id="thema_ja"></div>
-        <div id="thema_ch"></div>
-        <div id="speech"></div>
-        <div id="translator"></div>
-        <div id="hymn"></div>
-    </div>
+    <main>
+        <div id="wrap">
+            <div id="thema_ja">aaa</div>
+            <div id="thema_ch">aaaa</div>
+            <div id="info">
+                <div id="speech">aaaaa</div>
+                <div id="translator">aaaaaaa</div>
+                <div id="hymn">111/111</div>
+            </div>
+        </div>
+    </main>
     <script>
         setInterval( function() {
             document.getElementById('thema_ja').innerHTML = window.opener.document.getElementById('thema_ja').value;
@@ -25,10 +29,6 @@
             const hymn2 = window.opener.document.getElementById('hymn_2nd').value;
             document.getElementById('hymn').innerHTML = '讃美歌：'+hymn1;
             document.getElementById('hymn').innerHTML += (hymn2!='') ? '/'+hymn2 : ''
-            //document.getElementById('hymn_1nd').innerHTML = '讃美歌：' + window.opener.document.getElementById('hymn_1nd').value;
-            //document.getElementById('hymn_2nd').innerHTML = 
-            //(window.opener.document.getElementById('hymn_2nd').value!='') ? '/'+window.opener.document.getElementById('hymn_2nd').value:'';
-            //window.opener.document.getElementById('')
         },1000);
     </script>
 </body>

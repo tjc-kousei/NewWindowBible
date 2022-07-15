@@ -8,9 +8,16 @@ body {
 select{ 
     width: 13em;
     height: 4em;
+    background-color: rgb(226, 234, 156);
 }
 input[type="search"]{
     font-size: large;
+}
+table {
+    background-color: rgb(177,210,199)
+}
+input {
+    background-color: rgb(7, 203, 233);
 }
 table,td,form td button{
     margin: 0;
@@ -22,6 +29,3 @@ form{
     height: 4em;
     width: 5em;
 }
-#plus,#minus{ display: none;}
-ul { list-style: none; }
-#recordingslist audio { display: block; margin-bottom: 10px; }

@@ -11,10 +11,10 @@
                     <input type="search" id="thema_ja" placeholder="日本語" oninput="commit()">
                 </td>
                 <td rowspan="2">
-                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('thema','plus')">➕</button>
+                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('thema','plus')">&plus;</button>
                 </td>
                 <td rowspan="2">
-                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('thema','minus')">➖</button>
+                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('thema','minus')">&minus;</button>
                 </td>
             </tr>
             <tr>
@@ -60,10 +60,10 @@
                     <option value="  "></option>
                 </datalist>
                 <td rowspan="3">
-                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('person','plus')">➕</button>
+                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('person','plus')">&plus;</button>
                 </td>
                 <td rowspan="3">
-                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('person','minus')">➖</button>
+                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('person','minus')">&minus;</button>
                 </td>
             </tr>
             <tr>
@@ -186,33 +186,22 @@
                         </select>
                     </td>
                     <td style="text-align: center;">
-                        <button type="button" onclick="change('minus')">＜</button>
-                        <button type="button" onclick="change('plus')">＞</button>
+                        <button type="button" onclick="change('minus')">&lt;</button>
+                        <button type="button" onclick="change('plus')">&gt;</button>
                     </td>
                     <td style="text-align: center;">
-                        <input type="button" value="clear" onclick="clear_con()">
+                        <input type="button" value=&#9003; onclick="clear_con()">
                     </td>
                 </tr>
             </table>
         </form>
 
-        <button style="font-size: 2em;" onclick="sizechange('plus')">➕</button>
-        <button style="font-size: 2em;" onclick="sizechange('minus')">➖</button>
+        <button style="font-size: 2em;" onclick="sizechange('plus')">&plus;</button>
+        <button style="font-size: 2em;" onclick="sizechange('minus')">&minus;</button>
+        <button class="record">record</button>
+        <button class="stop">stop</button>
+        <div class="sound-clips"></div>
 
-        <br>
-        <button hidden onclick="startRecording(this);">record</button>
-        <button hidden onclick="stopRecording(this);" disabled>stop</button>
-        
-        <h2 hidden>Recordings</h2>
-        <ul id="recordingslist" hidden></ul>
-        
-        <h2 hidden>Log</h2>
-        <pre id="log" hidden></pre>
-        <p id="date"></p>
-        <p id="themavalue"></p>
-        <p id="peoplevalue"></p>
         <script src="./js/operate.js"></script>
-        <script src="./js/process.js"></script>
-        <script src="./js/recorder.js"></script>
     </body>
 </html>
