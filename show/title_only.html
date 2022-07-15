@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./title_only.css">
+</head>
+<body>
+    <div class="wrap">
+        <div id="thema_ja"></div>
+        <div id="thema_ch"></div>
+        <div id="speech"></div>
+        <div id="translator"></div>
+        <div id="hymn"></div>
+    </div>
+    <script>
+        setInterval( function() {
+            document.getElementById('thema_ja').innerHTML = window.opener.document.getElementById('thema_ja').value;
+            document.getElementById('thema_ch').innerHTML = window.opener.document.getElementById('thema_ch').value;
+            document.getElementById('speech').innerHTML = '説教者：' + window.opener.document.getElementById('speech').value;
+            document.getElementById('translator').innerHTML = '通訳者：' + window.opener.document.getElementById('translator').value;
+            const hymn1 = window.opener.document.getElementById('hymn_1nd').value;
+            const hymn2 = window.opener.document.getElementById('hymn_2nd').value;
+            document.getElementById('hymn').innerHTML = '讃美歌：'+hymn1;
+            document.getElementById('hymn').innerHTML += (hymn2!='') ? '/'+hymn2 : ''
+            //document.getElementById('hymn_1nd').innerHTML = '讃美歌：' + window.opener.document.getElementById('hymn_1nd').value;
+            //document.getElementById('hymn_2nd').innerHTML = 
+            //(window.opener.document.getElementById('hymn_2nd').value!='') ? '/'+window.opener.document.getElementById('hymn_2nd').value:'';
+            //window.opener.document.getElementById('')
+        },1000);
+    </script>
+</body>
+</html>

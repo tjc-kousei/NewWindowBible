@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 8px;
+}
+body { 
+    background-color: aliceblue;
+}
+select{ 
+    width: 13em;
+    height: 4em;
+}
+input[type="search"]{
+    font-size: large;
+}
+table,td,form td button{
+    margin: 0;
+}
+form{
+    margin: 0;
+}
+#syou,#setu {
+    height: 4em;
+    width: 5em;
+}
+#plus,#minus{ display: none;}
+ul { list-style: none; }
+#recordingslist audio { display: block; margin-bottom: 10px; }

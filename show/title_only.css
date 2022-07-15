@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(80, 190, 230);
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+}
+.wrap {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+#thema_ja, #thema_ch {
+    font-size: 10em;
+}
+#speech, #translator {
+    font-size: 5em;
+}
+#hymn {
+    font-size: 4em;
+}

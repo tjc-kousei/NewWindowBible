@@ -1,0 +1,218 @@
+<html lang="ja">
+    <meta http-equiv="content-type" charset="utf-8">
+    <link rel="stylesheet" href="./operate.css">
+    <body>
+        <table name="input_form">
+            <tr>
+                <td>
+                    <label for="thema_ja">テーマ（日）</label>
+                </td>
+                <td>
+                    <input type="search" id="thema_ja" placeholder="日本語" oninput="commit()">
+                </td>
+                <td rowspan="2">
+                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('thema','plus')">➕</button>
+                </td>
+                <td rowspan="2">
+                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('thema','minus')">➖</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="thema_ch">テーマ（中）</label>
+                </td>
+                <td>
+                    <input type="search" id="thema_ch" placeholder="中国語" oninput="commit()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="speech">説教者</label>
+                </td>
+                <td>
+                    <input type="search" id="speech" placeholder="説教者" list="s_list" oninput="commit()">
+                </td>
+                <datalist id="s_list">
+                    <option value="林 ヨハネ 執事"></option>
+                    <option value="何 陽輝 兄弟"></option>
+                    <option value="姚 ルカ 執事"></option>
+                    <option value="黄 祖強 兄弟"></option>
+                    <option value="蔡 聖耀 兄弟"></option>
+                    <option value="呉 偉 兄弟"></option>
+                    <option value="林 宏恩 兄弟"></option>
+                    <option value="余 偉 兄弟"></option>
+                    <option value="林 宏正 兄弟"></option>
+                    <option value="李 峰 兄弟"></option>
+                    <option value="呉 前風 兄弟"></option>
+                    <option value="林 永基 長老"></option>
+                    <option value="呉 ピレモン 長老"></option>
+                    <option value="木下 先義 長老"></option>
+                    <option value="小林 エリシャ 伝道者"></option>
+                    <option value="王 長卿 神学生"></option>
+                    <option value="王 為清 神学生"></option>
+                    <option value="遠藤 利 神学生"></option>
+                    <option value="林 テトス 執事"></option>
+                    <option value="李 イサク 執事"></option>
+                    <option value="施 建清 執事"></option>
+                    <option value="木下 ヨセフ 執事"></option>
+                    <option value="呉 正恵 兄弟"></option>
+                    <option value="黄 聡銘 兄弟"></option>
+                    <option value="  "></option>
+                </datalist>
+                <td rowspan="3">
+                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('person','plus')">➕</button>
+                </td>
+                <td rowspan="3">
+                    <button tabindex="-1" style="font-size: 1em;" onclick="adjust('person','minus')">➖</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="translator">通訳者</label>
+                </td>
+                <td>
+                    <input type="search" id="translator" placeholder="通訳者" list="t_list" oninput="commit()">
+                </td>
+                <datalist id="t_list">
+                    <option value="林 宏恩 兄弟"></option>
+                    <option value="林 宏正 兄弟"></option>
+                    <option value="蔡 聖耀 兄弟"></option>
+                    <option value="林 ヨハネ 執事"></option>
+                    <option value="江 姸 姉妹"></option>
+                    <option value="陳 梅 姉妹"></option>
+                    <option value="王 希揚 兄弟"></option>
+                    <option value="高崎 子穎 姉妹"></option>
+                </datalist>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">讃美歌</label>
+                </td>
+                <td>
+                    <input type="search" id="hymn_1nd" style="width: 4em;" oninput="commit()">
+                  / <input type="search" id="hymn_2nd" style="width: 4em;" oninput="commit()">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <form name="F">
+            <table>
+                <tr>
+                    <td>
+                        <select name="ot" id="select" onchange="rule('nt')">
+                            <option value="">旧約</option>
+                            <option value="0">01 創世記</option>
+                            <option value="1">02 出エジプト記</option>
+                            <option value="2">03 レビ記</option>
+                            <option value="3">04 民数記</option>
+                            <option value="4">05 申命記</option>
+                            <option value="5">06 ヨシュア記</option>
+                            <option value="6">07 士師記</option>
+                            <option value="7">08 ルツ記</option>
+                            <option value="8">09 サムエル記上</option>
+                            <option value="9">10 サムエル記下</option>
+                            <option value="10">11 列王記上</option>
+                            <option value="11">12 列王記下</option>
+                            <option value="12">13 歴代志上</option>
+                            <option value="13">14 歴代志下</option>
+                            <option value="14">15 エズラ記</option>
+                            <option value="15">16 ネヘミヤ記</option>
+                            <option value="16">17 エステル記</option>
+                            <option value="17">18 ヨブ記</option>
+                            <option value="18">19 詩篇</option>
+                            <option value="19">20 箴言</option>
+                            <option value="20">21 伝道の書</option>
+                            <option value="21">22 雅歌</option>
+                            <option value="22">23 イザヤ書</option>
+                            <option value="23">24 エレミヤ書</option>
+                            <option value="24">25 哀歌</option>
+                            <option value="25">26 エゼキエル書</option>
+                            <option value="26">27 ダニエル書</option>
+                            <option value="27">28 ホセア書</option>
+                            <option value="28">29 ヨエル書</option>
+                            <option value="29">30 アモス書</option>
+                            <option value="30">31 オバデア書</option>
+                            <option value="31">32 ヨナ書</option>
+                            <option value="32">33 ミカ書</option>
+                            <option value="33">34 ナホム書</option>
+                            <option value="34">35 ハバクク書</option>
+                            <option value="35">36 ゼパニヤ書</option>
+                            <option value="36">37 ハガイ書</option>
+                            <option value="37">38 ゼカリヤ書</option>
+                            <option value="38">39 マラキ書</option>
+                            
+                        </select>
+                    </td>
+                    <td>
+                        <datalist id="syou_list"></datalist>
+                        <input type="number" id="syou" list="syou_list" oninput="dis_setu()" placeholder="章">
+                    </td>
+                    <td>
+                        <datalist id="setu_list"></datalist>
+                        <input type="number" id="setu" list="setu_list" oninput="show()" placeholder="節">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="nt" id="select" onchange="rule('ot')">
+                            <option value="">新約</option>
+                            <option value="39">40 マタイによる福音書</option>
+                            <option value="40">41 マルコによる福音書</option>
+                            <option value="41">42 ルカによる福音書</option>
+                            <option value="42">43 ヨハネによる福音書</option>
+                            <option value="43">44 使徒行伝</option>
+                            <option value="44">45 ローマ人への手紙</option>
+                            <option value="45">46 コリント人への第一の手紙</option>
+                            <option value="46">47 コリント人への第二の手紙</option>
+                            <option value="47">48 ガラテヤ人への手紙</option>
+                            <option value="48">49 エペソ人への手紙</option>
+                            <option value="49">50 ピリピ人への手紙</option>
+                            <option value="50">51 コロサイ人への手紙</option>
+                            <option value="51">52 テサロニケ人への第一の手紙</option>
+                            <option value="52">53 テサロニケ人への第二の手紙</option>
+                            <option value="53">54 テモテへの第一の手紙</option>
+                            <option value="54">55 テモテへの第二の手紙</option>
+                            <option value="55">56 テトスへの手紙</option>
+                            <option value="56">57 ピレモンへの手紙</option>
+                            <option value="57">58 ヘブル人への手紙</option>
+                            <option value="58">59 ヤコブの手紙</option>
+                            <option value="59">60 ペテロの第一の手紙</option>
+                            <option value="60">61 ペテロの第二の手紙</option>
+                            <option value="61">62 ヨハネの第一の手紙</option>
+                            <option value="62">63 ヨハネの第二の手紙</option>
+                            <option value="63">64 ヨハネの第三の手紙</option>
+                            <option value="64">65 ユダの手紙</option>
+                            <option value="65">66 ヨハネの黙示録
+                        </select>
+                    </td>
+                    <td style="text-align: center;">
+                        <button type="button" onclick="change('minus')">＜</button>
+                        <button type="button" onclick="change('plus')">＞</button>
+                    </td>
+                    <td style="text-align: center;">
+                        <input type="button" value="clear" onclick="clear_con()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <button style="font-size: 2em;" onclick="sizechange('plus')">➕</button>
+        <button style="font-size: 2em;" onclick="sizechange('minus')">➖</button>
+
+        <br>
+        <button hidden onclick="startRecording(this);">record</button>
+        <button hidden onclick="stopRecording(this);" disabled>stop</button>
+        
+        <h2 hidden>Recordings</h2>
+        <ul id="recordingslist" hidden></ul>
+        
+        <h2 hidden>Log</h2>
+        <pre id="log" hidden></pre>
+        <p id="date"></p>
+        <p id="themavalue"></p>
+        <p id="peoplevalue"></p>
+        <script src="./js/operate.js"></script>
+        <script src="./js/process.js"></script>
+        <script src="./js/recorder.js"></script>
+    </body>
+</html>
