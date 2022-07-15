@@ -298,7 +298,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 
                 a = document.createElement("a")
                 a.href = audioURL
-                a.click()
+                // a.click()
               
                 deleteButton.onclick = function(e) {
                   let evtTgt = e.target;
