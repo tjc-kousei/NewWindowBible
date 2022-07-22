@@ -5,7 +5,7 @@
     display: none;
 }
 body {
-    background-color: rgb(217,250,239);
+    background-color: rgb(213,229,245);
     color: black;
     font-family: Arial;
     font-weight: bold;
@@ -19,7 +19,7 @@ main {
 }
 #thema_ja, #thema_ch {
     text-align: center;
-    font-size: 7rem;
+    font-size: 9rem;
 }
 #thema_ch {
     color: rgb(23,28,107);
@@ -35,7 +35,7 @@ main {
     
 }
 #speech, #translator, #hymn {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 #hymn {
     color: rgb(0,30,245);
